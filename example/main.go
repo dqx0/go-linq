@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/dqx0/linq"
+	"github.com/dqx0/go-linq"
 )
 
 func main() {
