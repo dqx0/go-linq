@@ -16,7 +16,7 @@ package linq
 // 	Returns:
 // 	- A query that returns only the elements that match the condition.
 //
-func (q query[T]) Where(cond func(x T) bool) query[T] {
+func Where[T any](q Query[T], cond func(item T) bool) Query[T] {
 	return func(yield func(T) bool) {
 		for v := range q {
 			if !cond(v) {
