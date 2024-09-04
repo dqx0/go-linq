@@ -12,7 +12,7 @@ package linq
 //
 // Parameters:
 //   - selector: A transformation function to apply to each element.
-func (q query[T]) Select(selector func(x T) T) query[T] {
+func Select[T any](q Query[T], selector func(item T) T) Query[T] {
 	return func(yield func(T) bool) {
 		for v := range q {
 			if !yield(selector(v)) {

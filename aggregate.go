@@ -13,7 +13,7 @@ package linq
 // Parameters:
 //   - initial: The initial value.
 //   - aggregator: A function to aggregate the elements.
-func (q query[T]) Aggregate(initial T, aggregator func(accumulator T, item T) T) T {
+func Aggregate[T any](q Query[T], initial T, aggregator func(accumulator T, item T) T) T {
 	acc := initial
 	q(func(item T) bool {
 		acc = aggregator(acc, item)
