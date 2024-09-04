@@ -1,3 +1,3 @@
-module github.com/dqx0/go-linq
+module github.com/dqx0/linq
 
 go 1.23.0
