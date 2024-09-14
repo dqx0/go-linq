@@ -16,7 +16,7 @@ jobs:
   build-go-executables:
     # Build go executables and store them as artifacts
     docker:
-      - image: cimg/go:1.223.1
+      - image: cimg/go:1.23.1
     steps:
       - checkout
       - run:
